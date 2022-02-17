@@ -7,8 +7,46 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.space-around {
+	display: flex;
+	justify-content: space-around;
+}
+
+.img-avatar {
+	border-radius: 50%;
+}
+
+p {
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	font-size: 19pt;
+	font-weight: 350;
+	line-height: 1.5em;
+	color: #888;
+}
+
+.p-intro {
+	font-size: 19pt;
+	font-weight: 250;
+
+}
+
+.b-bold {
+	font-weight: 750;
+}
+
+br {
+	display: block; /* makes it have a width */
+	content: ""; /* clears default height */
+	margin-top: 10px; /* change this to whatever height you want it */
+}
+ 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, h2, h3, h4, h5, h6, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -131,11 +169,11 @@ input, select, textarea {
 	}
 
 		h2.alt {
-			color: #888;
+			color: rgb(63, 63, 63);
 		}
 
 			h2.alt strong {
-				color: #666;
+				color: rgb(75, 75, 75);
 			}
 
 	h3 {
@@ -2241,14 +2279,14 @@ input, select, textarea {
 					}
 
 			#main > section.cover {
-				padding: 10em 0;
+				padding: 8em 0;
 				background-size: cover;
 				background-position: center center;
 			}
 
 			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-color: #e8edec;
+				/* background-image: url("../../images/banner.jpg"); */
 			}
 
 			#main > section.two {
