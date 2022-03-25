@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<div class="container" id="drones">
+
+    <body>
+        <h2>Drone Racing</h2>
+        <div style="height: 20px;"></div>
+
+        <!-- Profit! -->
+        <div>
+            <iframe class="ifr" src="https://www.youtube.com/embed/q71JbDa1V24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+
+
+        <zero-md id="drones-abs" src="projects/drones-abstract.md" style="text-align: justify;">
+            <template>
+                <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+                <link rel="stylesheet" href="assets/css/main.css" />
+                <style>
+                    .p {
+                        text-align: justify;
+                    }
+                </style>
+            </template>
+        </zero-md>
+
+        <zero-md id="drones-art" src="projects/drones.md" style="text-align: justify; display: none;">
+            <template>
+                <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+                <link rel="stylesheet" href="assets/css/main.css" />
+                <style>
+                    .p {
+                        text-align: justify;
+                    }
+                </style>
+            </template>
+        </zero-md>
+
+        <button id="drones-btn" onclick="showHide('drones-art','drones-btn')">Show more</button>
+
+    </body>
+
+</div>
+
+
+
+</html>

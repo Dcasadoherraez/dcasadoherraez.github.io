@@ -9,6 +9,7 @@
 
 /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
 .ifr {
+    margin-right: 10px;
     width: 100vh;
     height: 56.25vh;
 }
@@ -17,7 +18,6 @@
     height: auto;
     width: 60%;
 }
-
 
 .space-around {
     display: flex;
