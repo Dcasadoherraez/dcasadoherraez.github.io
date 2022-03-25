@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<div class="container" id="storeview">
+
+    <body>
+        <h2>Web StoreView</h2>
+        <!-- Profit! -->
+        <iframe src="https://drive.google.com/file/d/1tc12wyFqhr6xfHHyPFcknhcC67U3CaUW/preview" width="640" height="480" allow="autoplay"></iframe>
+
+        <zero-md id="storeview-abs" src="projects/storeview-abstract.md" style="text-align: justify;">
+            <template>
+                <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+                <link rel="stylesheet" href="assets/css/main.css" />
+                <style>
+                    .p {
+                        text-align: justify;
+                    }
+                </style>
+            </template>
+        </zero-md>
+
+        <zero-md id="storeview-art" src="projects/storeview.md" style="text-align: justify; display: none;">
+            <template>
+                <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+                <link rel="stylesheet" href="assets/css/main.css" />
+                <style>
+                    .p {
+                        text-align: justify;
+                    }
+                </style>
+            </template>
+        </zero-md>
+
+        <button id="storeview-btn" onclick="showHide('storeview-art','storeview-btn')">Show more</button>
+
+    </body>
+
+</div>
+
+
+
+</html>

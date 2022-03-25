@@ -374,7 +374,18 @@ br.clear {
     width: 1400px;
 }
 
-@media screen and (min-width: 961px) and (max-width: 1880px) {
+@media screen and (max-width: 1100px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-avatar {
+        width: 50%;
+    }
+}
+
+/* @media screen and (min-width: 961px) and (max-width: 1880px) {
     .container {
         width: 1200px;
     }
@@ -402,7 +413,7 @@ br.clear {
     .container {
         width: 100%;
     }
-}
+} */
 
 
 /* Row */

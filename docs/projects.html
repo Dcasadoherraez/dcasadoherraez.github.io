@@ -17,7 +17,7 @@
             if (file) {
                 /* Make an HTTP request using the attribute value as the file name: */
                 xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
+                xhttp.onreadystatechange = function () {
                     if (this.readyState == 4) {
                         if (this.status == 200) {
                             elmnt.innerHTML = this.responseText;
@@ -84,13 +84,23 @@
                 <ul>
                     <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
 
+                    <!-- EKF SLAM -->
                     <li>
                         <a href="#2d-ekf" id="portfolio-link"><span class="icon solid fa-map">Multithreaded
                                 EKF-SLAM</span></a>
-
                     </li>
-                    <li><a href="#flowcloud" id="about-link"><span class="icon solid fa-camera">Edge Image
-                                Segmentation</span></a></li>
+
+                    <!-- Cloud Segmentation -->
+                    <li>
+                        <a href="#flowcloud" id="about-link"><span class="icon solid fa-camera">Edge Image
+                                Segmentation</span></a>
+                    </li>
+
+                    <!-- Cloud Segmentation -->
+                    <li>
+                        <a href="#storeview" id="about-link"><span class="icon solid fa-map-marker">Web StoreView</span></a>
+                    </li>
+
                     <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a>
                     </li>
                 </ul>
@@ -115,15 +125,20 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- About Me -->
+        <!-- EKF SLAM -->
         <section id="2d-ekf" class="two">
             <div w3-include-html="projects/ekf-slam.html"></div>
         </section>
 
 
-        <!-- About Me -->
+        <!-- Image Segmentation -->
         <section id="flowcloud" class="two">
             <div w3-include-html="projects/flowcloud.html"></div>
+        </section>
+
+        <!-- Storeview -->
+        <section id="storeview" class="two">
+            <div w3-include-html="projects/storeview.html"></div>
         </section>
 
         <!-- Contact -->

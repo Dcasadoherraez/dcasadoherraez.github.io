@@ -1,0 +1,3 @@
+Who wouldn't enjoy shopping at a virtual Amazon store? Even the employees would benefit from looking up for the products in different sections of a warehouse. That's part of the future virtual reality from the metaverse! 
+
+I managed and developed the Web StoreView project during my internship at [MCQ-Scan](https://mcq-scan.com/index.php/en/accueil-english/) as a tool for the employees to observe and analyze store anomalies. It is built on JavaScript and it uses the [Three.js](https://threejs.org/) library for 3D rendering.
