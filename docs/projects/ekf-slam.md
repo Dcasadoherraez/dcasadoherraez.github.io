@@ -98,9 +98,11 @@ this algorithm, and simulated in the experiments as a small time delay.
 The last steps of EKF SLAM are trivial and can be observed in the
 algorithm pseudocode.
 
-![image](https://github.com/Dcasadoherraez/cpp-threads/raw/main/ekf-slam/media/pseudocode.png)
-
-
+<div style="text-align: center">
+<figure>
+<img class="image-container" src="https://github.com/Dcasadoherraez/cpp-threads/raw/main/ekf-slam/media/pseudocode.png" />
+</figure>
+</div>
 
 ## EKF SLAM multithreading
 
@@ -131,7 +133,11 @@ number of landmarks was limited by the Eigen C++ library to 100, which
 made the change in performance barely noticeable for having more or less
 landmarks.
 
-![image](https://github.com/Dcasadoherraez/cpp-threads/blob/main/ekf-slam/media/sigma_par.png?raw=true)
+<div style="text-align: center">
+<figure>
+<img class="image-container" src="https://github.com/Dcasadoherraez/cpp-threads/blob/main/ekf-slam/media/sigma_par.png?raw=true" />
+</figure>
+</div>
 
 ### Parallelize measurement prediction jacobian
 

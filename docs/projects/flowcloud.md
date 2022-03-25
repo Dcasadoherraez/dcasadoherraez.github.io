@@ -256,11 +256,13 @@ those classes with values between 0 and 35. An example of the images
 contained in the dataset can be observed in Fig.
 <a href="#fig:cityscapessamples" data-reference-type="ref" data-reference="fig:cityscapessamples">1</a>.
 
-<div style="text-align: center"> 
+
+<div style="text-align: center">
 <figure>
-<img src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/cityscapes.png?raw=true" id="fig:cityscapessamples" alt="Cityscapes dataset sample training images." /><figcaption aria-hidden="true">Cityscapes dataset sample training images.</figcaption>
+<img class="image-container" id="fig:cityscapessamples" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/cityscapes.png?raw=true" /><figcaption aria-hidden="true">Cityscapes dataset sample training images.</figcaption>
 </figure>
 </div>
+
 
 # Architecture Selection
 
@@ -407,9 +409,10 @@ corresponding layers can be observed in Table
 
 <div style="text-align: center">
 <figure>
-<img src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/pipeline.png?raw=true" id="fig:pipeline" alt="Video transmision via TCP server (left branch) and image segmentation in the TCP client" /><figcaption aria-hidden="true">Video transmision via TCP server (left branch) and image segmentation in the TCP client</figcaption>
+<img class="image-container" id="fig:pipeline" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/pipeline.png?raw=true" /><figcaption aria-hidden="true">Video transmision via TCP server (left branch) and image segmentation in the TCP client.</figcaption>
 </figure>
 </div>
+
 
 ## Evaluation and Results <span id="section:Eval" label="section:Eval"></span>
 
@@ -465,10 +468,10 @@ IDs transformed to the corresponding colors.
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><figure>
-<img width="500px" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/results1.png?raw=true" id="fig:acc" />
+<img width="100%" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/results1.png?raw=true" id="fig:acc" />
 </figure></td>
 <td style="text-align: left;"><figure>
-<img width="500px" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/results2.png?raw=true" id="fig:loss"/>
+<img width="100%" src="https://github.com/Dcasadoherraez/cloud-image-segmentation/blob/main/media/results2.png?raw=true" id="fig:loss"/>
 </figure></td>
 </tr>
 

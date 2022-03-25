@@ -1,9 +1,6 @@
 1. <a href="#section:Requirements" data-reference-type="ref" data-reference="section:Requirements">Requirements</a>.
-2. <a href="#section:ImSeg" data-reference-type="ref" data-reference="section:ImSeg">Proposed solution</a>.
-3. <a href="#section:Impl" data-reference-type="ref" data-reference="section:Impl">Implementation</a>.
-4. <a href="#section:Eval" data-reference-type="ref" data-reference="section:Eval">Evaluation</a>.
-5. <a href="#section:Disc" data-reference-type="ref" data-reference="section:Disc">Discussion</a>.
-6. <a href="#section:Conc" data-reference-type="ref" data-reference="section:Conc">Conclusion</a>.
+2. <a href="#section:HighLvl" data-reference-type="ref" data-reference="section:HighLvl">High level design</a>.
+3. <a href="#section:Res" data-reference-type="ref" data-reference="section:Res">Results</a>.
 
 ## Requirements <span id="section:Requirements" label="section:Requirements"></span>
 
@@ -22,7 +19,7 @@ Knowing the requirements, it's possible to study the available options in the ma
 
 As a result, building a framework from scratch would benefit meeting all the requirements while at the same time adding flexible customization possibilities for the future.
 
-## High level design
+## High level design <span id="section:HighLvl" label="section:HighLvl"></span>
 
 The system design can be divided into three main questions: 1) How can we make a web visualization in software? 2) What's the visualization strategy? 3) How can we handle that in harware?  
 
@@ -34,9 +31,9 @@ Starting from the most basic level, we could start from scratch using [OpenGL](h
 
 At first, it might seem that Three.js might just be oriented towards simple web graphics. You can se below an example I built from the tutorials at [Three.js Fundamentals](https://threejs.org/manual/) to learn the basics on camera perspectives and movement synchronization.
 
-<div style="text-align: center">
+<div  style="text-align: center">
 <figure>
-<img src="images/tank.gif" id="fig:pipeline" alt="Video transmision via TCP server (left branch) and image segmentation in the TCP client" /><figcaption aria-hidden="true">Tutorial example using a tank minigame</figcaption>
+<img class="image-container" src="images/tank.gif" id="fig:pipeline" alt="Video transmision via TCP server (left branch) and image segmentation in the TCP client" /><figcaption aria-hidden="true">Tutorial example using a tank minigame</figcaption>
 </figure>
 </div>
 
@@ -56,13 +53,9 @@ It's good to note that there is no need to have a specific number of shots for e
 
 Until now everything has been just moving forward in the implementation. However, what happens if we try to cache N*10MB high-res images in RAM? The system crashes after a few walks around the store. Therefore it is necessary to drop the previous sphere-keeping strategy. A new sphere is created at every scene change and the previous ones are disposed. Future implementations could use local caching of the surrounding scenes.
 
-## Results 
+## Results <span id="section:Res" label="section:Res"></span>
 
-The results can be visualized below. The loading time of the app is <5s in the local machine. Transition between scenes is smooth allowing for quick movement, and some extra features such as zoom and aisle selection make the visualization easy to use!
+The results can be visualized above. The loading time of the app is <5s in the local machine. Transition between scenes is smooth allowing for quick movement, and some extra features such as zoom and aisle selection make the visualization easy to use!
 
-<div style="text-align: center">
-<figure>
-<iframe src="https://drive.google.com/file/d/1tc12wyFqhr6xfHHyPFcknhcC67U3CaUW/preview" width="640" height="480" allow="autoplay"></iframe>
-</figure>
-</div>
+
 
