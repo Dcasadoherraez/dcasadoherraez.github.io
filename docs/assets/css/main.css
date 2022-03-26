@@ -399,6 +399,11 @@ br.clear {
         width: 100vw;
         height: 56.25vw;
     }
+
+    p, .p-intro {
+        font-size: 11pt;
+    }
+
 }
 
 /* @media screen and (min-width: 961px) and (max-width: 1880px) {
