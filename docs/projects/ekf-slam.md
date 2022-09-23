@@ -7,24 +7,23 @@ current state of the robot only to the previous state and estimates is
 probability of being at the current state. The algorithm is divided into
 two main steps, prediction and correction.
 
-The state vector has a 3 + 2N length where N is the number of
+The state vector has a 3 + 2N, composed by the pose in the 2D plane and the 2D coordinates of N
 landmarks. It is defined as
 
 ![equation](https://latex.codecogs.com/svg.image?x_t&space;=&space;(x,&space;y,&space;\theta,&space;m_{1,x},&space;m_{1,y},&space;m_{2,x},&space;m_{2,y}&space;...))
-
-Where ![equation](https://latex.codecogs.com/svg.image?m_i&space;=(m_{i,x},&space;m_{i,y})) are the coordinates of the landmarks.
 
 The covariance matrix is 2N x 2N defined as
 
 ![equation](https://latex.codecogs.com/svg.image?\Sigma_{t}=\begin{pmatrix}\Sigma_{xx}&space;&&space;\Sigma_{xm}\\\\\Sigma_{mx}&space;&&space;\Sigma_{mm}\end{pmatrix})
 
 The input vector (odometry vector) is defined as
+
 ![equation](https://latex.codecogs.com/svg.image?u_t&space;=&space;(v_t,&space;\delta_1,&space;\delta_2))
 
 
-The measurements come in the form of id, range and bearing
-![equation](https://latex.codecogs.com/svg.image?z_i&space;=&space;(id,&space;r_i,&space;\phi_i)), and they are interpreted as an unordered map
-in the C++ code.
+The measurements come in the form of id, range and bearing, and they are interpreted as a hash map in the C++ code.
+
+![equation](https://latex.codecogs.com/svg.image?z_i&space;=&space;(id,&space;r_i,&space;\phi_i))
 
 Note that all the measurements must come already asscociated into the
 algorithm.
@@ -98,9 +97,9 @@ this algorithm, and simulated in the experiments as a small time delay.
 The last steps of EKF SLAM are trivial and can be observed in the
 algorithm pseudocode.
 
-<div style="text-align: center">
+<div >
 <figure>
-<img class="image-container" src="https://github.com/Dcasadoherraez/cpp-threads/raw/main/ekf-slam/media/pseudocode.png" />
+<img class="image-container" style="width:45%" src="https://github.com/Dcasadoherraez/cpp-threads/raw/main/ekf-slam/media/pseudocode.png" />
 </figure>
 </div>
 
@@ -109,9 +108,8 @@ algorithm pseudocode.
 
 As seen in the previous section, there are two main areas of
 experimentation for multithreading in EKF SLAM. The first one is in the
-computation of the covariance matrix prediction ![equation](https://latex.codecogs.com/svg.image?\Sigma^-). The second
-one is batch-computing the jacobian of the observation for each landmark
-![equation](https://latex.codecogs.com/svg.image?H_{low,t}^i).
+computation of the covariance matrix prediction. The second
+one is batch-computing the jacobian of the observation for each landmark.
 
 Two additional threads were used in order to display the robot movement
 in a 2D image as well as publishing of the current time. All the writing
@@ -147,13 +145,12 @@ different landmark observations into different threads. As the
 computation is performed in constant time, the runtime reduction is not
 noticeable without a modification to the code.
 
-A 10ms delay was added to each landmark computation, simulating the
-process of matching and association in a real world system.
+A 10ms delay was added to each landmark computation, simulating the process of
+matching and association in a real world system. In addition, at maximum, six
+observations were made at the same time by the robot, so having a feature batch
+size of one is reasonable for an eight core CPU.
 
-At maximum, six observations were made at the same time by the robot, so
-having a feature batch size of one is reasonable for an eight core CPU.
-
-Perfroming the operations sequentially lead to the addition of the
+Performing the operations sequentially lead to the addition of the
 runtimes for each landmark. If the robot observes 6 landmarks, the delay
 is 60.3ms, if it observes 2 landmarks, the delay is 20.3ms.
 

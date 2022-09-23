@@ -42,59 +42,18 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script> 
+    $(function(){
+      $("#sidebar").load("sidebar.html"); 
+    });
+    </script> 
 </head>
 
 <body class="is-preload">
 
 	<!-- Header -->
-	<div id="header">
-
-		<div class="top">
-
-			<!-- Logo -->
-			<div id="logo">
-				<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-				<h1 id="title">Daniel Casado</h1>
-				<p>MSc. in Robotics and AI</p>
-			</div>
-
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li>
-						<div class="main-menu-link"><a href="#top"><span class="icon solid fa-home">Home</span></a>
-						</div>
-					</li>
-					<li>
-						<div class="main-menu-link"><a href="#portfolio" id="portfolio-link"><span
-									class="icon solid fa-th">Projects</span></a></div>
-					</li>
-					<li>
-						<div class="main-menu-link"><a href="#about" id="about-link"><span
-									class="icon solid fa-user">About Me</span></a></div>
-					</li>
-					<li>
-						<div class="main-menu-link"><a href="#contact" id="contact-link"><span
-									class="icon solid fa-envelope">Contact</span></a></div>
-					</li>
-				</ul>
-			</nav>
-
-		</div>
-
-		<div class="bottom">
-
-			<!-- Social Icons -->
-			<ul class="icons">
-				<li><a href="https://github.com/Dcasadoherraez/" class="icon brands fa-github"><span
-							class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/daniel-casado-herraez/" class="icon brands fa-linkedin"><span
-							class="label">Linkedin</span></a></li>
-			</ul>
-
-		</div>
-
-	</div>
+	<div id="sidebar"></div>
 
 	<!-- Main -->
 	<div id="main">

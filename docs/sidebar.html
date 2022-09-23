@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<script>
+    function showHide(elementID, buttonID) {
+        var x = document.getElementById(elementID);
+        var b = document.getElementById(buttonID);
+
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        if (b.innerHTML == "Show more") b.innerHTML = "Show less";
+        else b.innerHTML = "Show more";
+
+    }
+
+</script>
+<html>
+
+<head>
+    <title>Daniel Casado Herraez</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+                <h1 id="title">Daniel Casado</h1>
+                <p>MSc. in Robotics and AI</p>
+            </div>
+
+            <div class="main-menu-link">
+                <span class="icon solid fa-home"></span>
+                <div>
+                    <a href="index.html#top">Home</a>
+                </div>
+            </div>
+
+
+            <div class="main-menu-link dropdown-btn">
+                <span class="icon solid fa-map"></span>
+                <div>
+                    <a href="#portfolio" id="portfolio-link">
+                        Projects</span></a>
+                </div>
+            </div>
+
+
+            <div class="dropdown-container">
+                <div class="main-menu-link">
+                    <a href="projects.html#2d-ekf" id="portfolio-link">Concurrent EKF
+                        SLAM</span></a>
+                </div>
+                <div class="main-menu-link">
+                    <a href="projects.html#slam" id="portfolio-link">HILTI SLAM Challenge
+                        2022</span></a>
+                </div>
+
+                <div class="main-menu-link">
+                    <a href="projects.html#flowcloud" id="about-link">Edge Image
+                        Segmentation</span></a>
+                </div>
+
+                <div class="main-menu-link">
+                    <a href="projects.html#storeview" id="about-link">Web
+                        StoreView</span></a>
+                </div>
+                <!-- 
+                <div class="main-menu-link">
+                    <a href="#drones" id="about-link">Mixed Reality
+                        Therapy</span></a>
+                </div> -->
+
+                <div class="main-menu-link">
+                    <a href="projects.html#drones" id="about-link">Drone
+                        Racing</span></a>
+                </div>
+            </div>
+
+
+            <div class="main-menu-link">
+                <span class="icon solid fa-user-graduate"></span>
+                <div>
+                    <a href="index.html#about">About me</a>
+                </div>
+            </div>
+
+
+            <div class="main-menu-link">
+                <span class="icon solid fa-at"></span>
+                <div>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+
+            <!-- <div class="main-menu-link dropdown-btn">
+                <span class="icon solid fa-book"></span>Research
+                <i class="fa fa-caret-down"></i>
+            </div> -->
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://github.com/Dcasadoherraez/" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                <li><a href="https://www.linkedin.com/in/daniel-casado-herraez/" class="icon brands fa-linkedin"><span
+                            class="label">Linkedin</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>
+
+</html>
+
