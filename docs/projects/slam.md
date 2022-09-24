@@ -13,8 +13,7 @@ Odometry and Mapping) that uses Eigen and Ceres C++ library. The algorithm
 remains the same, and it is based on pointcloud matching of detected edges and
 surfaces. 
 
-The edges and surfaces are mainly identified by measuring a smoothness term
-![equation](https://latex.codecogs.com/svg.image?s). 
+The edges and surfaces are mainly identified by measuring a smoothness term.
 
 ![equation](https://latex.codecogs.com/svg.image?s&space;=&space;\frac{1}{|\mathcal{S}|\centerdot||X_{k,&space;i}^L||}||\sum&space;{X_{k,&space;i}^L&space;-&space;X_{k,&space;j}^L}||)
 

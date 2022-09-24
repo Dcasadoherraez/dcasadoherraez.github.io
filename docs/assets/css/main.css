@@ -51,6 +51,12 @@ html{scroll-behavior:smooth}
 }
 
 /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.container-ifr {
+    display: flex;
+    padding-right: 5%;
+    padding-left: 5%;
+    justify-content: center;
+}
 .ifr {
     margin-right: 10px;
     width: 100vh;
