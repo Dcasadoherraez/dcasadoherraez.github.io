@@ -168,7 +168,6 @@ kbd,
 q,
 s,
 samp,
-small,
 strike,
 strong,
 sub,
@@ -2291,6 +2290,7 @@ button:active,
 .icon {
     text-decoration: none;
     text-decoration: none;
+    color: #c7697a
 }
 
 .icon:before {
